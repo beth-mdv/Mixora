@@ -79,4 +79,9 @@ Responsive behavior includes:
 
 Git is used to track project changes.
 Feature and documentation branches are merged into the main branch after review.
-```
+
+## GitHub Pages
+
+The Mixora landing page is published on GitHub Pages:
+
+https://beth-mdv.github.io/Mixora/
