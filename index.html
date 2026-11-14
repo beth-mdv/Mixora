@@ -1,0 +1,1823 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="Mixora — create your own coffee blend, or explore freshly roasted signature blends."
+    />
+
+    <title>Mixora — Your Coffee. Your Rules.</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/header-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Boldonse&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/style.css?v=hero-top-4" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header class="h-[75px] max-[767px]:h-auto">
+      <div
+        class="mx-auto grid h-full w-[calc(100%-96px)] max-w-none grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] items-center gap-5 max-[800px]:gap-3 max-[769px]:w-[calc(100%-32px)] max-[767px]:h-auto max-[767px]:min-h-[75px] max-[767px]:grid-rows-[75px_auto] max-[767px]:gap-y-0"
+      >
+        <button
+          class="hidden h-10 w-10 items-center justify-center max-[767px]:inline-flex"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-navigation-drawer"
+        >
+          <svg
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+
+        <nav
+          id="primary-navigation"
+          aria-label="Main navigation"
+          class="flex min-w-0 items-center gap-[26px] text-[13px] max-[800px]:flex-wrap max-[800px]:gap-3 max-[540px]:text-[11px] max-[767px]:hidden"
+        >
+          <a
+            class="-mx-2 -my-1 rounded-full px-2 py-1 transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none"
+            href="#products"
+          >
+            Shop products
+          </a>
+
+          <a
+            class="-mx-2 -my-1 rounded-full px-2 py-1 transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none"
+            href="#contact"
+          >
+            Contact us
+          </a>
+
+          <a
+            class="-mx-2 -my-1 rounded-full px-2 py-1 transition-colors duration-200 ease-in-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none"
+            href="#create"
+          >
+            Create your mix
+            <span aria-hidden="true">→</span>
+          </a>
+        </nav>
+
+        <a
+          class="justify-self-center max-[767px]:col-start-2 max-[767px]:row-start-1"
+          href="index.html"
+          aria-label="Mixora home"
+        >
+          <img
+            class="h-[56px] w-[58px] object-contain mix-blend-multiply max-[800px]:h-12 max-[800px]:w-12 max-[540px]:h-10 max-[540px]:w-10"
+            src="assets/images/header-logo.png"
+            alt="Mixora symbol"
+          />
+        </a>
+
+        <nav
+          aria-label="Shopping and account"
+          class="relative flex items-center justify-self-end gap-[22px] max-[800px]:gap-2 max-[767px]:col-start-3 max-[767px]:row-start-1"
+        >
+          <button
+            class="absolute -left-10 top-1/2 inline-flex h-8 w-8 shrink-0 -translate-y-1/2 items-center justify-center rounded-full transition-[background-color,transform,scale] duration-200 ease-out hover:bg-[#F4E1B9] active:scale-[0.95] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:active:scale-100 max-[767px]:hidden"
+            type="button"
+            aria-label="Search coffee blends"
+            aria-expanded="false"
+            aria-controls="desktop-search-panel"
+            data-desktop-search-toggle
+          >
+            <svg
+              class="h-[22px] w-[22px] shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <circle cx="10.8" cy="10.8" r="6.8" />
+              <path d="m16 16 4 4" />
+            </svg>
+          </button>
+
+          <a
+            class="relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-[background-color,transform,scale] duration-200 ease-out hover:bg-[#F4E1B9] active:scale-[0.95] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:active:scale-100"
+            href="cart.html"
+            aria-label="Shopping cart"
+            data-cart-link
+          >
+            <img
+              class="h-6 w-6 shrink-0"
+              src="assets/icons/cart.svg"
+              alt=""
+            />
+            <span
+              class="absolute -right-1 -top-1 hidden min-h-4 min-w-4 items-center justify-center rounded-full bg-[#FC4696] px-1 font-[Inter,sans-serif] text-[10px] leading-4 text-white tabular-nums"
+              data-cart-badge
+              aria-hidden="true"
+            ></span>
+          </a>
+
+          <a
+            class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-[background-color,transform,scale] duration-200 ease-out hover:bg-[#F4E1B9] active:scale-[0.95] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:active:scale-100"
+            href="profile.html"
+            aria-label="User profile"
+          >
+            <img
+              class="h-[27px] w-[27px] shrink-0"
+              src="assets/icons/profile.svg"
+              alt=""
+            />
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section
+      id="desktop-search-panel"
+      class="fixed right-12 top-[75px] z-[60] hidden w-[min(92vw,420px)] rounded-2xl border border-[#B9A99C] bg-[#FFF9ED] p-5 text-[#27140D] shadow-xl max-[767px]:hidden"
+      aria-label="Search coffee blends"
+      aria-hidden="true"
+      inert
+      data-desktop-search-panel
+    >
+      <form
+        class="flex flex-col"
+        role="search"
+        data-search-form
+      >
+        <div class="flex items-center gap-2">
+        <label class="sr-only" for="desktop-product-search"
+          >Search coffee blends</label
+        >
+        <input
+          class="min-w-0 flex-1 rounded-lg border border-[#B9A99C] bg-transparent px-3 py-2 font-[Inter,sans-serif] text-sm placeholder:text-[#27140D]/60 focus-visible:border-[#FC4696] focus-visible:outline-2 focus-visible:outline-[#FC4696]"
+          id="desktop-product-search"
+          type="search"
+          placeholder="Search coffee blends"
+          autocomplete="off"
+          aria-controls="desktop-search-results"
+          data-product-search
+        />
+        <button
+          class="rounded-md px-2 py-2 font-[Inter,sans-serif] text-xs text-[#27140D] transition-colors hover:text-[#FC4696] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+          type="button"
+          aria-label="Clear search"
+          data-search-clear
+        >
+          Clear
+        </button>
+        <button
+          class="flex h-9 w-9 items-center justify-center rounded-full transition-colors hover:bg-[#FC4696]/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+          type="button"
+          aria-label="Close search"
+          data-search-close
+        >
+          <svg
+            class="h-5 w-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            aria-hidden="true"
+          >
+            <path d="m6 6 12 12M18 6 6 18" />
+          </svg>
+        </button>
+        </div>
+      <p class="sr-only" role="status" aria-live="polite" data-search-status></p>
+      <ul
+        class="mt-3 max-h-72 overflow-y-auto"
+        id="desktop-search-results"
+        data-search-results
+      ></ul>
+      </form>
+    </section>
+
+    <div
+      class="pointer-events-none fixed inset-0 z-40 bg-[#27140D]/30 opacity-0 data-[open]:opacity-100 transition-opacity duration-300 motion-reduce:transition-none max-[767px]:block"
+      data-drawer-backdrop
+      aria-hidden="true"
+      inert
+    ></div>
+
+    <div
+      id="mobile-navigation-drawer"
+      class="pointer-events-none fixed left-0 top-0 z-50 hidden h-dvh w-[80vw] max-w-[360px] -translate-x-full data-[open]:translate-x-0 overflow-y-auto bg-[#FFF9ED] font-[Inter,sans-serif] text-[#27140D] shadow-xl transition-transform duration-300 motion-reduce:transition-none max-[767px]:block"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      aria-hidden="true"
+      inert
+    >
+      <div class="px-6 pt-5">
+        <div class="flex min-h-12 items-center justify-end">
+          <button
+            class="flex h-12 w-12 items-center justify-center"
+            type="button"
+            aria-label="Close navigation menu"
+            data-drawer-close
+          >
+            <svg
+              class="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="m6 6 12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+
+        <nav class="mt-4 flex flex-col" aria-label="Mobile navigation links">
+          <a
+            class="flex min-h-12 items-center border-b border-[#B9A99C] text-sm font-medium tracking-[0.04em]"
+            href="#products"
+            >SHOP PRODUCTS</a
+          >
+          <a
+            class="flex min-h-12 items-center border-b border-[#B9A99C] text-sm font-medium tracking-[0.04em]"
+            href="#create"
+            >CREATE YOUR MIX</a
+          >
+          <a
+            class="flex min-h-12 items-center border-b border-[#B9A99C] text-sm font-medium tracking-[0.04em]"
+            href="#about"
+            >ABOUT MIXORA</a
+          >
+          <a
+            class="flex min-h-12 items-center border-b border-[#B9A99C] text-sm font-medium tracking-[0.04em]"
+            href="#contact"
+            >CONTACT US</a
+          >
+        </nav>
+
+        <form
+          class="mt-6 border-t border-[#B9A99C] pt-5"
+          role="search"
+          data-search-form
+        >
+          <label
+            class="mb-2 block font-[Inter,sans-serif] text-sm font-medium"
+            for="mobile-product-search"
+            >Search coffee blends</label
+          >
+          <div class="flex items-center gap-2">
+            <input
+              class="min-w-0 flex-1 rounded-lg border border-[#B9A99C] bg-transparent px-3 py-2 font-[Inter,sans-serif] text-sm placeholder:text-[#27140D]/60 focus-visible:border-[#FC4696] focus-visible:outline-2 focus-visible:outline-[#FC4696]"
+              id="mobile-product-search"
+              type="search"
+              placeholder="Try citrus or caramel"
+              autocomplete="off"
+              aria-controls="mobile-search-results"
+              data-product-search
+            />
+            <button
+              class="rounded-md px-2 py-2 font-[Inter,sans-serif] text-xs transition-colors hover:text-[#FC4696] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+              type="button"
+              aria-label="Clear search"
+              data-search-clear
+            >
+              Clear
+            </button>
+          </div>
+          <p
+            class="mt-2 font-[Inter,sans-serif] text-xs"
+            role="status"
+            aria-live="polite"
+            data-search-status
+          ></p>
+          <ul
+            class="max-h-64 overflow-y-auto"
+            id="mobile-search-results"
+            data-search-results
+          ></ul>
+        </form>
+      </div>
+    </div>
+
+    <main id="main-content">
+  <section class="hero framed" aria-labelledby="hero-heading">
+    <div class="mixora-hero-top" aria-hidden="true">
+      <svg
+        class="hero-corner hero-corner-left"
+        viewBox="0 0 48 48"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M48 0 A48 48 0 0 0 0 48"
+          vector-effect="non-scaling-stroke"
+        />
+      </svg>
+
+      <svg
+        class="hero-corner hero-corner-right"
+        viewBox="0 0 48 48"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M48 0 A48 48 0 0 0 0 48"
+          vector-effect="non-scaling-stroke"
+        />
+      </svg>
+    </div>
+
+        <div class="container">
+          <h1 id="hero-heading">
+            YOUR COFFEE.
+
+            <em> YOUR RULES </em>
+          </h1>
+
+          <p class="hero-desc">
+            <span class="max-[767px]:hidden">
+              Coffee should be as unique as you are. Explore our ready-made blends
+              or create your own by
+
+              <br class="desktop-only" />
+              choosing the beans, roast, and flavours that match your taste.
+            </span>
+            <span class="hidden max-[767px]:inline">
+              Coffee should be as unique as you are. Explore ready-made blends or
+              create your own.
+            </span>
+          </p>
+
+          <div class="actions">
+            <a
+              class="pill pill-dark shadow-none transition-[transform,translate,box-shadow] duration-200 ease-out hover:-translate-y-[4px] hover:shadow-[0_6px_0_#C9C2BD] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:active:translate-y-0"
+              href="constructor.html"
+            >
+              Create your mix
+
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a
+              class="pill shadow-none transition-[transform,translate,box-shadow] duration-200 ease-out hover:-translate-y-[4px] hover:shadow-[0_6px_0_#C9C2BD] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:active:translate-y-0"
+              href="#products"
+            >
+              Shop all
+            </a>
+          </div>
+
+          <div class="hero-packs">
+            <img
+              class="hero-products-single"
+              src="assets/images/products-hero.webp"
+              alt="Mixora coffee products"
+              fetchpriority="high"
+            />
+          </div>
+
+          <div class="featured-control">
+            <button
+              type="button"
+              class="round-arrow transition-transform duration-200 enabled:hover:scale-105 enabled:active:scale-95 enabled:focus-visible:outline-2 enabled:focus-visible:outline-offset-2 enabled:focus-visible:outline-[#FC4696] motion-reduce:transition-none"
+              aria-label="Previous product"
+              disabled
+            >
+              <img src="assets/icons/arrow-left.svg" alt="" />
+            </button>
+
+            <div>
+              <h2>Daily balance</h2>
+
+              <p>Discover the taste and character of our signature coffee</p>
+
+              <a
+                class="pill pill-mini shadow-none transition-[transform,translate,box-shadow] duration-200 ease-out hover:-translate-y-[4px] hover:shadow-[0_6px_0_#C9C2BD] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:active:translate-y-0"
+                href="#products"
+              >
+                See details
+              </a>
+            </div>
+
+            <button
+              type="button"
+              class="round-arrow transition-transform duration-200 enabled:hover:scale-105 enabled:active:scale-95 enabled:focus-visible:outline-2 enabled:focus-visible:outline-offset-2 enabled:focus-visible:outline-[#FC4696] motion-reduce:transition-none"
+              aria-label="Next product"
+              disabled
+            >
+              <img src="assets/icons/arrow-right.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-0a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-0a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-0b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-0b)"
+          />
+        </svg>
+      </div>
+
+      <section
+        class="about bordered-section"
+        id="about"
+        aria-labelledby="about-heading"
+      >
+        <div class="about-inner container">
+          <div class="about-copy">
+            <p class="section-eyebrow">ABOUT MIXORA</p>
+
+            <h2 id="about-heading">
+              NOT JUST
+
+              <br />
+              COFFEE.
+
+              <em>
+                YOUR
+
+                <br />
+                COFFEE.
+              </em>
+            </h2>
+
+            <p>
+              We believe great coffee shouldn't be one-size-fits-all. That's why
+              Mixora puts you in control — from choosing your beans and roast to
+              experimenting with blends and finding your perfect flavor.
+            </p>
+
+            <ul class="benefits">
+              <li>
+                <img
+                  src="assets/icons/feature-heart.svg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span>Your taste, your blend</span>
+              </li>
+
+              <li>
+                <img
+                  src="assets/icons/feature-done.svg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span>Ready-made favorites, too</span>
+              </li>
+
+              <li>
+                <img
+                  src="assets/icons/feature-price.svg"
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                />
+
+                <span>Live price</span>
+              </li>
+            </ul>
+          </div>
+
+          <figure class="about-media">
+            <img
+              src="assets/images/about-photo.webp"
+              alt="Person holding colorful Morning Ritual and Citrus Bloom coffee packs"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-1a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-1a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-1b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-1b)"
+          />
+        </svg>
+      </div>
+
+      <section
+        class="steps bordered-section"
+        id="how-it-works"
+        aria-labelledby="steps-heading"
+      >
+        <div class="container">
+          <div class="section-lead">
+            <div>
+              <p class="section-eyebrow">SIMPLE STEPS</p>
+
+              <h2 id="steps-heading">HOW IT WORKS?</h2>
+            </div>
+
+            <p>
+              Mixora lets you create coffee around your taste and make every cup
+              feel personal.
+            </p>
+          </div>
+
+          <div class="step-grid">
+            <article class="step">
+              <img
+                src="assets/images/step-1.webp"
+                alt="Coffee flavors illustration"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span> 01 </span>
+
+              <h3>Tell us what you like</h3>
+
+              <p>Choose your vibe and flavor notes.</p>
+            </article>
+
+            <article class="step">
+              <img
+                src="assets/images/step-2.webp"
+                alt="Coffee beans illustration"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span> 02 </span>
+
+              <h3>Build your blend</h3>
+
+              <p>We combine the best beans for your taste.</p>
+            </article>
+
+            <article class="step">
+              <img
+                src="assets/images/step-3.webp"
+                alt="After Dark coffee mix and beans"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span> 03 </span>
+
+              <h3>See your recipe + price</h3>
+
+              <p>Get a full breakdown of your mix.</p>
+            </article>
+
+            <article class="step">
+              <img
+                src="assets/images/step-4.webp"
+                alt="Coffee shipping box"
+                loading="lazy"
+                decoding="async"
+              />
+
+              <span> 04 </span>
+
+              <h3>We roast & ship it</h3>
+
+              <p>Freshly roasted, packed, and shipped to you.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-2a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-2a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-2b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-2b)"
+          />
+        </svg>
+      </div>
+
+      <section
+        class="bordered-section py-12 md:py-16"
+        aria-labelledby="brew-heading"
+      >
+        <div class="container">
+          <div class="mx-auto w-full max-w-[900px] text-center">
+            <p class="section-eyebrow !mb-2 !text-[14px]">HOW TO BREW</p>
+
+            <h2
+              id="brew-heading"
+              class="!mb-8 font-[Boldonse,sans-serif] text-[36px] font-normal leading-[1.2] min-[768px]:text-[56px]"
+            >
+              Make every cup yours.
+            </h2>
+
+            <p class="!mb-6 font-[Inter,sans-serif] text-base leading-6 md:!mb-10 md:text-xl md:leading-7">
+              Discover a simple way to bring out the best in your coffee.
+            </p>
+
+            <div class="aspect-video w-full overflow-hidden rounded-[24px]">
+              <iframe
+                class="h-full w-full border-0"
+                src="https://www.youtube-nocookie.com/embed/1oB1oDrDkHM"
+                title="A Better 1 Cup V60 Technique — James Hoffmann"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-brew-a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-brew-a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-brew-b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-brew-b)"
+          />
+        </svg>
+      </div>
+
+      <section
+        class="custom bordered-section"
+        id="create"
+        aria-labelledby="custom-heading"
+      >
+        <div class="container custom-grid">
+          <figure>
+            <img
+              src="assets/images/features-photo.webp"
+              alt="Two friends holding cups of coffee against a bright green and yellow background"
+              loading="lazy"
+              decoding="async"
+            />
+          </figure>
+
+          <div class="custom-copy">
+            <p class="section-eyebrow">MADE BY YOU</p>
+
+            <h2 id="custom-heading">
+              YOUR MIX.
+
+              <br />
+              YOUR LABEL.
+
+              <br />
+              <em> YOUR COFFEE </em>
+            </h2>
+
+            <p>
+              Create a blend that matches your taste, give it a personal label,
+              and make it truly yours.
+            </p>
+
+            <a href="constructor.html" class="text-link">
+              Create your mix
+
+              <span aria-hidden="true">→ </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-3a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-3a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-3b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-3b)"
+          />
+        </svg>
+      </div>
+
+      <section
+        class="products bordered-section"
+        id="products"
+        aria-labelledby="products-heading"
+      >
+        <div class="container">
+          <div class="products-lead">
+            <div>
+              <p class="section-eyebrow">OUR BLENDS</p>
+
+              <h2 id="products-heading">
+                DON’T WANT TO MIX?
+
+                <br />
+
+                <em> WE ALREADY DID IT </em>
+              </h2>
+            </div>
+
+            <a
+              class="pill shadow-none transition-[transform,translate,box-shadow] duration-200 ease-out hover:-translate-y-[4px] hover:shadow-[0_6px_0_#C9C2BD] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:active:translate-y-0"
+              href="catalog.html"
+            >
+              See all products
+            </a>
+          </div>
+
+          <div class="product-grid">
+            <article
+              class="product group relative overflow-hidden"
+              id="product-morning-ritual"
+            >
+              <a class="relative top-5" href="product-morning-ritual.html">
+                <div class="relative top-5">
+                  <img
+                    class="transition-transform duration-300 ease-out motion-reduce:transition-none group-hover:-translate-y-[10px] group-hover:rotate-[5deg] group-focus-within:-translate-y-[10px] group-focus-within:rotate-[5deg] group-data-[active]:-translate-y-[10px] group-data-[active]:rotate-[5deg]"
+                    src="assets/images/product-ritual.webp"
+                    alt="Morning Ritual coffee pack"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <h3>Morning ritual</h3>
+
+                <p>Balance · Choco · Nutty</p>
+              </a>
+              <div
+                class="pointer-events-none absolute right-3 top-3 z-10 translate-y-2 scale-90 opacity-0 transition-[opacity,transform,translate,scale] duration-300 motion-reduce:transition-none group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:scale-100 group-focus-within:opacity-100 group-data-[active]:pointer-events-auto group-data-[active]:translate-y-0 group-data-[active]:scale-100 group-data-[active]:opacity-100"
+              >
+                <a
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF9ED] text-[#27140D] shadow-sm transition-colors hover:bg-[#FC4696] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+                  href="#product-morning-ritual"
+                  aria-label="View Morning Ritual details"
+                  data-product-action
+                >
+                  <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article
+              class="product group relative overflow-hidden"
+              id="product-citrus-bloom"
+            >
+              <a class="relative top-5" href="catalog.html">
+                <div class="relative top-5">
+                  <img
+                    class="transition-transform duration-300 ease-out motion-reduce:transition-none group-hover:-translate-y-[10px] group-hover:rotate-[5deg] group-focus-within:-translate-y-[10px] group-focus-within:rotate-[5deg] group-data-[active]:-translate-y-[10px] group-data-[active]:rotate-[5deg]"
+                    src="assets/images/product-citrus.webp"
+                    alt="Citrus Bloom coffee pack"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <h3>Citrus bloom</h3>
+
+                <p>Bright · Floral · Citrus</p>
+              </a>
+              <div
+                class="pointer-events-none absolute right-3 top-3 z-10 translate-y-2 scale-90 opacity-0 transition-[opacity,transform,translate,scale] duration-300 motion-reduce:transition-none group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:scale-100 group-focus-within:opacity-100 group-data-[active]:pointer-events-auto group-data-[active]:translate-y-0 group-data-[active]:scale-100 group-data-[active]:opacity-100"
+              >
+                <a
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF9ED] text-[#27140D] shadow-sm transition-colors hover:bg-[#FC4696] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+                  href="#product-citrus-bloom"
+                  aria-label="View Citrus Bloom details"
+                  data-product-action
+                >
+                  <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article
+              class="product group relative overflow-hidden"
+              id="product-after-dark"
+            >
+              <a class="relative top-5" href="catalog.html">
+                <div class="relative top-5">
+                  <img
+                    class="transition-transform duration-300 ease-out motion-reduce:transition-none group-hover:-translate-y-[10px] group-hover:rotate-[5deg] group-focus-within:-translate-y-[10px] group-focus-within:rotate-[5deg] group-data-[active]:-translate-y-[10px] group-data-[active]:rotate-[5deg]"
+                    src="assets/images/product-dark.webp"
+                    alt="After Dark coffee pack"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <h3>After dark</h3>
+
+                <p>Bold · Cocoa · Roasty</p>
+              </a>
+              <div
+                class="pointer-events-none absolute right-3 top-3 z-10 translate-y-2 scale-90 opacity-0 transition-[opacity,transform,translate,scale] duration-300 motion-reduce:transition-none group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:scale-100 group-focus-within:opacity-100 group-data-[active]:pointer-events-auto group-data-[active]:translate-y-0 group-data-[active]:scale-100 group-data-[active]:opacity-100"
+              >
+                <a
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF9ED] text-[#27140D] shadow-sm transition-colors hover:bg-[#FC4696] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+                  href="#product-after-dark"
+                  aria-label="View After Dark details"
+                  data-product-action
+                >
+                  <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article
+              class="product group relative overflow-hidden"
+              id="product-daily-balance"
+            >
+              <a class="relative top-5" href="catalog.html">
+                <div class="relative top-5">
+                  <img
+                    class="transition-transform duration-300 ease-out motion-reduce:transition-none group-hover:-translate-y-[10px] group-hover:rotate-[5deg] group-focus-within:-translate-y-[10px] group-focus-within:rotate-[5deg] group-data-[active]:-translate-y-[10px] group-data-[active]:rotate-[5deg]"
+                    src="assets/images/product-daily.webp"
+                    alt="Daily Balance coffee pack"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+
+                <h3>Daily balance</h3>
+
+                <p>Sweet · Caramel · Smooth</p>
+              </a>
+              <div
+                class="pointer-events-none absolute right-3 top-3 z-10 translate-y-2 scale-90 opacity-0 transition-[opacity,transform,translate,scale] duration-300 motion-reduce:transition-none group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:scale-100 group-hover:opacity-100 group-focus-within:pointer-events-auto group-focus-within:translate-y-0 group-focus-within:scale-100 group-focus-within:opacity-100 group-data-[active]:pointer-events-auto group-data-[active]:translate-y-0 group-data-[active]:scale-100 group-data-[active]:opacity-100"
+              >
+                <a
+                  class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FFF9ED] text-[#27140D] shadow-sm transition-colors hover:bg-[#FC4696] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+                  href="#product-daily-balance"
+                  aria-label="View Daily Balance details"
+                  data-product-action
+                >
+                  <svg
+                    class="h-[18px] w-[18px]"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M7 17 17 7M8 7h9v9" />
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-4a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-4a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-4b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-4b)"
+          />
+        </svg>
+      </div>
+
+      <section
+        id="find-us"
+        class="bordered-section py-12 md:py-16"
+        aria-labelledby="find-us-heading"
+      >
+        <div class="container">
+          <div class="mx-auto w-full max-w-[900px] text-center">
+            <p class="section-eyebrow !mb-2 !text-[14px]">FIND US</p>
+
+            <h2
+              id="find-us-heading"
+              class="!mb-4 font-[Boldonse,sans-serif] text-[36px] font-normal leading-[1.2] min-[768px]:text-[56px]"
+            >
+              Good coffee starts here.
+            </h2>
+
+            <p class="!mb-6 font-[Inter,sans-serif] text-base leading-6 md:!mb-10 md:text-xl md:leading-7">
+              Explore our demo location in the heart of Lviv.
+            </p>
+          </div>
+
+          <div class="mx-auto w-full max-w-[1050px]">
+            <div class="h-[320px] w-full overflow-hidden rounded-[24px] md:h-[380px] lg:h-[450px]">
+              <iframe
+                class="h-full w-full border-0"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.060134600789!2d24.0315923!3d49.8413276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6daee0eb21%3A0x98a6b79bb05742c2!2z0L_Qu9C-0YnQsCDQoNC40L3QvtC6LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1793553573018!5m2!1suk!2sua"
+                title="Google Maps — Demo location at Rynok Square, Lviv"
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <p class="!mt-4 text-center font-[Inter,sans-serif] text-xs leading-5 sm:text-sm">
+              Demo location: Rynok Square, Lviv. Mixora is a concept brand; this is not a physical store address.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="container relative">
+      <div
+        class="footer-main relative mt-0 grid grid-cols-[2.5fr_repeat(3,1fr)] gap-7 rounded-[35px] bg-[var(--ink)] px-[50px] py-[55px] text-[var(--cream)] max-[800px]:grid-cols-3 max-[800px]:px-[26px] max-[800px]:py-[38px] max-[540px]:grid-cols-2 max-[540px]:gap-[25px] max-[540px]:px-6 max-[540px]:py-[34px]"
+      >
+        <div
+          class="footer-brand flex flex-col gap-[7px] max-[800px]:col-span-full"
+        >
+          <img
+            class="w-[285px] mix-blend-screen"
+            src="assets/images/footer-logo.png"
+            alt="Mixora"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <p class="text-[12px] leading-[18px]">Made for your taste.</p>
+        </div>
+
+        <nav class="flex flex-col gap-[13px]" aria-label="Explore">
+          <h2 class="text-[12px] leading-[18px]">EXPLORE</h2>
+
+          <a
+            class="mt-2 text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="#products"
+          >
+            Shop Products
+          </a>
+
+          <a
+            class="text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="constructor.html"
+          >
+            Create Your Mix
+          </a>
+
+          <a
+            class="text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="#about"
+          >
+            About Us
+          </a>
+        </nav>
+
+        <nav class="flex flex-col gap-[13px]" aria-label="Support">
+          <h2 class="text-[12px] leading-[18px]">SUPPORT</h2>
+
+          <a
+            class="mt-2 text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="contact.html"
+          >
+            Contact Us
+          </a>
+
+          <a
+            class="text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="contact.html"
+          >
+            Shipping &amp; Returns
+          </a>
+
+          <a
+            class="text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="contact.html"
+          >
+            FAQ
+          </a>
+        </nav>
+
+        <nav
+          class="flex flex-col gap-[13px] max-[540px]:col-span-full"
+          aria-label="Legal"
+        >
+          <h2 class="text-[12px] leading-[18px]">LEGAL</h2>
+
+          <a
+            class="mt-2 text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="privacy.html"
+          >
+            Privacy Policy
+          </a>
+
+          <a
+            class="text-[12px] leading-[18px] transition-opacity hover:opacity-75 focus-visible:opacity-75"
+            href="terms.html"
+          >
+            Terms of Service
+          </a>
+        </nav>
+      </div>
+
+      <div
+        class="footer-bottom relative flex justify-between px-10 pb-5 pt-[15px] text-[11px] max-[540px]:px-[15px]"
+      >
+        <span> © 2026 Mixora. All rights reserved. </span>
+
+        <a
+          class="inline-flex h-6 w-6 items-center justify-center transition-opacity hover:opacity-75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696]"
+          href="https://www.instagram.com/"
+          aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            class="h-6 w-6"
+            src="assets/icons/instagram.svg"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </a>
+      </div>
+    </footer>
+
+    <script>
+      const menuButton = document.querySelector(
+        'button[aria-controls="mobile-navigation-drawer"]',
+      );
+      const mobileDrawer = document.getElementById("mobile-navigation-drawer");
+      const drawerBackdrop = document.querySelector("[data-drawer-backdrop]");
+      const drawerCloseButton = mobileDrawer.querySelector("[data-drawer-close]");
+      const drawerLinks = [...mobileDrawer.querySelectorAll("a[href]")];
+      const backgroundElements = [...document.body.children].filter(
+        (element) => element !== mobileDrawer && element !== drawerBackdrop,
+      );
+      let isMenuOpen = false;
+      let previousBodyOverflow = "";
+      let previousDocumentOverflow = "";
+      let previousBackgroundInert = [];
+
+      function setMenuOpen(isOpen, restoreFocus = true) {
+        isMenuOpen = isOpen;
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation menu" : "Open navigation menu",
+        );
+        mobileDrawer.classList.toggle("pointer-events-none", !isOpen);
+        mobileDrawer.toggleAttribute("data-open", isOpen);
+        mobileDrawer.setAttribute("aria-hidden", String(!isOpen));
+        mobileDrawer.inert = !isOpen;
+
+        drawerBackdrop.classList.toggle("pointer-events-none", !isOpen);
+        drawerBackdrop.toggleAttribute("data-open", isOpen);
+        drawerBackdrop.inert = !isOpen;
+
+        if (isOpen) {
+          previousBodyOverflow = document.body.style.overflow;
+          previousDocumentOverflow = document.documentElement.style.overflow;
+          previousBackgroundInert = backgroundElements.map(
+            (element) => element.inert,
+          );
+          backgroundElements.forEach((element) => {
+            element.inert = true;
+          });
+          document.body.style.overflow = "hidden";
+          document.documentElement.style.overflow = "hidden";
+          drawerCloseButton.focus();
+        } else {
+          document.body.style.overflow = previousBodyOverflow;
+          document.documentElement.style.overflow = previousDocumentOverflow;
+          backgroundElements.forEach((element, index) => {
+            element.inert = previousBackgroundInert[index];
+          });
+          if (restoreFocus) {
+            menuButton.focus();
+          }
+        }
+      }
+
+      menuButton.addEventListener("click", () => {
+        setMenuOpen(!isMenuOpen);
+      });
+
+      drawerCloseButton.addEventListener("click", () => setMenuOpen(false));
+      drawerBackdrop.addEventListener("click", () => setMenuOpen(false));
+      drawerLinks.forEach((link) => {
+        link.addEventListener("click", () => setMenuOpen(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (!isMenuOpen) {
+          return;
+        }
+
+        if (event.key === "Escape") {
+          event.preventDefault();
+          setMenuOpen(false);
+          return;
+        }
+
+        if (event.key === "Tab") {
+          const focusableElements = [
+            ...mobileDrawer.querySelectorAll(
+              'button:not([disabled]), input:not([disabled]), a[href]',
+            ),
+          ].filter((element) => element.getClientRects().length > 0);
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+
+          if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+          } else if (
+            !event.shiftKey &&
+            document.activeElement === lastElement
+          ) {
+            event.preventDefault();
+            firstElement.focus();
+          }
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768 && isMenuOpen) {
+          setMenuOpen(false, false);
+          document.querySelector("#primary-navigation a")?.focus();
+        }
+      });
+
+      const cartLink = document.querySelector("[data-cart-link]");
+      const cartBadge = cartLink.querySelector("[data-cart-badge]");
+
+      function updateCartCount(count) {
+        const normalizedCount = Number.isFinite(count)
+          ? Math.max(0, Math.floor(count))
+          : 0;
+        const badgeLabel = normalizedCount > 99 ? "99+" : String(normalizedCount);
+
+        cartBadge.textContent = badgeLabel;
+        cartBadge.classList.toggle("hidden", normalizedCount === 0);
+        cartBadge.classList.toggle("inline-flex", normalizedCount > 0);
+        cartLink.setAttribute(
+          "aria-label",
+          normalizedCount === 0
+            ? "Shopping cart"
+            : `Shopping cart, ${normalizedCount} ${
+                normalizedCount === 1 ? "item" : "items"
+              }`,
+        );
+      }
+
+      updateCartCount(3);
+
+      const desktopSearchToggle = document.querySelector(
+        "[data-desktop-search-toggle]",
+      );
+      const desktopSearchPanel = document.querySelector(
+        "[data-desktop-search-panel]",
+      );
+      const desktopSearchClose = desktopSearchPanel.querySelector(
+        "[data-search-close]",
+      );
+      const searchInputs = [...document.querySelectorAll("[data-product-search]")];
+      const searchResultLists = [
+        ...document.querySelectorAll("[data-search-results]"),
+      ];
+      const searchStatusElements = [
+        ...document.querySelectorAll("[data-search-status]"),
+      ];
+      const coffeeBlends = [
+        {
+          name: "Morning Ritual",
+          details: "Balance · Choco · Nutty",
+          keywords: ["chocolate", "cocoa", "nutty", "morning"],
+          target: "product-morning-ritual",
+        },
+        {
+          name: "Citrus Bloom",
+          details: "Bright · Floral · Citrus",
+          keywords: ["citrus", "orange", "floral", "fruity"],
+          target: "product-citrus-bloom",
+        },
+        {
+          name: "After Dark",
+          details: "Bold · Cocoa · Roasty",
+          keywords: ["dark", "cocoa", "chocolate", "roasty"],
+          target: "product-after-dark",
+        },
+        {
+          name: "Daily Balance",
+          details: "Sweet · Caramel · Smooth",
+          keywords: ["daily", "caramel", "sweet", "smooth"],
+          target: "product-daily-balance",
+        },
+      ];
+      let isDesktopSearchOpen = false;
+
+      function renderSearchResults(blends) {
+        searchResultLists.forEach((list) => {
+          if (blends.length === 0) {
+            const emptyState = document.createElement("li");
+            emptyState.className =
+              "px-2 py-3 font-[Inter,sans-serif] text-sm text-[#27140D]/70";
+            emptyState.textContent = "No coffee blends found";
+            list.replaceChildren(emptyState);
+            return;
+          }
+
+          const items = blends.map((blend) => {
+            const item = document.createElement("li");
+            const link = document.createElement("a");
+            const name = document.createElement("span");
+            const details = document.createElement("span");
+
+            link.className =
+              "flex flex-col gap-1 border-b border-[#B9A99C] px-2 py-3 font-[Inter,sans-serif] transition-colors hover:bg-[#FC4696]/10 focus-visible:outline-2 focus-visible:outline-inset focus-visible:outline-[#FC4696]";
+            link.href = `#${blend.target}`;
+            link.dataset.searchResult = "true";
+            name.className = "text-sm font-semibold";
+            name.textContent = blend.name;
+            details.className = "text-xs text-[#27140D]/70";
+            details.textContent = blend.details;
+            link.append(name, details);
+            item.append(link);
+            return item;
+          });
+
+          list.replaceChildren(...items);
+        });
+
+        const status =
+          blends.length === 0
+            ? "No coffee blends found"
+            : `${blends.length} coffee ${
+                blends.length === 1 ? "blend" : "blends"
+              } found`;
+        searchStatusElements.forEach((element) => {
+          element.textContent = status;
+        });
+      }
+
+      function updateSearchResults(query) {
+        const normalizedQuery = query.trim().toLocaleLowerCase();
+        const terms = normalizedQuery.split(/\s+/).filter(Boolean);
+        const matchingBlends = coffeeBlends.filter((blend) => {
+          const searchableText = [
+            blend.name,
+            blend.details,
+            ...blend.keywords,
+          ]
+            .join(" ")
+            .toLocaleLowerCase();
+          return terms.every((term) => searchableText.includes(term));
+        });
+
+        renderSearchResults(matchingBlends);
+      }
+
+      function setDesktopSearchOpen(isOpen, restoreFocus = true) {
+        isDesktopSearchOpen = isOpen;
+        desktopSearchToggle.setAttribute("aria-expanded", String(isOpen));
+        desktopSearchPanel.classList.toggle("hidden", !isOpen);
+        desktopSearchPanel.setAttribute("aria-hidden", String(!isOpen));
+        desktopSearchPanel.inert = !isOpen;
+
+        if (isOpen) {
+          desktopSearchPanel.querySelector("[data-product-search]").focus();
+        } else if (restoreFocus) {
+          desktopSearchToggle.focus();
+        }
+      }
+
+      searchInputs.forEach((input) => {
+        input.addEventListener("input", () => {
+          searchInputs.forEach((otherInput) => {
+            if (otherInput !== input) {
+              otherInput.value = input.value;
+            }
+          });
+          updateSearchResults(input.value);
+        });
+
+        input.addEventListener("keydown", (event) => {
+          if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+            return;
+          }
+
+          const results = [
+            ...input
+              .closest("form")
+              .parentElement.querySelectorAll("[data-search-result]"),
+          ];
+          const target =
+            event.key === "ArrowDown" ? results[0] : results.at(-1);
+          if (target) {
+            event.preventDefault();
+            target.focus();
+          }
+        });
+      });
+
+      document.querySelectorAll("[data-search-form]").forEach((form) => {
+        form.addEventListener("submit", (event) => event.preventDefault());
+        form.querySelector("[data-search-clear]").addEventListener("click", () => {
+          const input = form.querySelector("[data-product-search]");
+          input.value = "";
+          input.dispatchEvent(new Event("input", { bubbles: true }));
+          input.focus();
+        });
+
+        form
+          .querySelector("[data-search-results]")
+          .addEventListener("keydown", (event) => {
+            if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+              return;
+            }
+
+            const results = [
+              ...event.currentTarget.querySelectorAll("[data-search-result]"),
+            ];
+            const currentIndex = results.indexOf(event.target);
+            const nextIndex =
+              event.key === "ArrowDown"
+                ? Math.min(currentIndex + 1, results.length - 1)
+                : Math.max(currentIndex - 1, 0);
+            if (results[nextIndex]) {
+              event.preventDefault();
+              results[nextIndex].focus();
+            }
+          });
+      });
+
+      desktopSearchToggle.addEventListener("click", () => {
+        setDesktopSearchOpen(!isDesktopSearchOpen);
+      });
+      desktopSearchClose.addEventListener("click", () => {
+        setDesktopSearchOpen(false);
+      });
+      desktopSearchPanel.addEventListener("click", (event) => {
+        if (event.target.closest("[data-search-result]")) {
+          setDesktopSearchOpen(false);
+        }
+      });
+      mobileDrawer.addEventListener("click", (event) => {
+        if (event.target.closest("[data-search-result]")) {
+          setMenuOpen(false);
+          setTimeout(() => menuButton.focus(), 0);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && isDesktopSearchOpen) {
+          event.preventDefault();
+          setDesktopSearchOpen(false);
+        }
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          isDesktopSearchOpen &&
+          !desktopSearchPanel.contains(event.target) &&
+          !desktopSearchToggle.contains(event.target)
+        ) {
+          setDesktopSearchOpen(false, false);
+        }
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth < 768 && isDesktopSearchOpen) {
+          setDesktopSearchOpen(false, false);
+        }
+      });
+
+      updateSearchResults("");
+
+      const productGrid = document.querySelector(".product-grid");
+      const productCards = [...productGrid.querySelectorAll(".product")];
+
+      function setActiveProductCard(activeCard) {
+        productCards.forEach((card) => {
+          card.toggleAttribute("data-active", card === activeCard);
+        });
+      }
+
+      productGrid.addEventListener("click", (event) => {
+        const card = event.target.closest(".product");
+        if (!card || event.target.closest("[data-product-action]")) {
+          return;
+        }
+
+        event.preventDefault();
+        setActiveProductCard(card);
+      });
+
+      productGrid.addEventListener("keydown", (event) => {
+        const card = event.target.closest(".product");
+        if (!card || event.repeat) {
+          return;
+        }
+
+        const actionLink = event.target.closest("[data-product-action]");
+        if (actionLink && event.code === "Space") {
+          event.preventDefault();
+          actionLink.click();
+          return;
+        }
+
+        if (
+          !actionLink &&
+          event.target.closest(".product > a") &&
+          event.code === "Space"
+        ) {
+          event.preventDefault();
+          setActiveProductCard(card);
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          setActiveProductCard(null);
+        }
+      });
+    </script>
+  </body>
+</html>

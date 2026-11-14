@@ -1,0 +1,1525 @@
+/* Mixora Lab 05 — HTML5 + CSS3; temporary screenshot-derived visual assets. */
+:root {
+  --page-gutter: 48px;
+  --frame-line: #b9a99c;
+  --frame-width: 1px;
+  --frame-radius: 48px;
+  --header-guide-start: 75px;
+  --cream: #fff9ed;
+  --ink: #29150e;
+  --pink: #fc4696;
+  --line: var(--frame-line);
+  --muted: #b4a79f;
+  --container: 1160px;
+  --font-body: "DM Sans", Arial, sans-serif;
+  --font-head: "Barlow Condensed", Impact, sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 15px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+#primary-navigation a {
+  color: #27140D;
+}
+#primary-navigation a:hover {
+  color: #9A8C83;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+figure,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+button {
+  font: inherit;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--pink);
+  outline-offset: 4px;
+}
+.container {
+  width: min(calc(100% - 56px), var(--container));
+  margin-inline: auto;
+}
+.framed {
+  position: relative;
+}
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+}
+h1,
+.about h2,
+.steps h2,
+.custom h2,
+.products h2 {
+  font-family: var(--font-head);
+  font-weight: 800;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+.hero {
+  text-align: center;
+  padding: 45px 0 35px;
+}
+.hero h1 {
+  font-size: clamp(48px, 6.7vw, 103px);
+  white-space: nowrap;
+}
+.hero em,
+.about em,
+.custom em,
+.products em {
+  color: var(--pink);
+  font-style: normal;
+}
+.hero-desc {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.3;
+  max-width: 760px;
+  margin: 12px auto 23px;
+}
+.actions {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid var(--ink);
+  padding: 11px 24px;
+  border-radius: 999px;
+  font-size: 13px;
+  min-height: 42px;
+  background: transparent;
+}
+.pill-dark {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+.pill-mini {
+  padding: 7px 20px;
+  min-height: 30px;
+  font-size: 11px;
+}
+.hero-packs {
+  margin: 40px auto 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 950px;
+  gap: 65px;
+}
+.featured-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 660px;
+  margin: auto;
+  gap: 20px;
+}
+.featured-control h2 {
+  font: 800 30px/1 var(--font-head);
+}
+.featured-control p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 6px 0 10px;
+}
+.round-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--ink);
+  border-radius: 50%;
+  background: transparent;
+  font-size: 24px;
+  opacity: 0.8;
+  flex-shrink: 0;
+}
+.round-arrow:disabled {
+  cursor: default;
+}
+.bordered-section {
+  position: relative;
+}
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.about-copy {
+  padding: 90px 9% 70px 4%;
+}
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px;
+}
+.about h2,
+.custom h2 {
+  font-size: clamp(54px, 5.1vw, 81px);
+}
+.about-copy > p:not(.section-eyebrow),
+.custom-copy > p:not(.section-eyebrow) {
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 480px;
+  margin-top: 22px;
+}
+.benefits {
+  padding: 0;
+  list-style: none;
+  margin: 26px 0;
+  display: grid;
+  gap: 13px;
+  font-size: 13px;
+}
+.about-media {
+  background: var(--pink);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 0 28px 28px 0;
+  align-self: stretch;
+}
+.about-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.steps {
+  padding-top: 48px;
+}
+.section-lead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 40px;
+  padding: 0 4% 28px;
+}
+.section-lead h2 {
+  font-size: clamp(58px, 5.5vw, 86px);
+}
+.section-lead > p {
+  font-size: 15px;
+  max-width: 420px;
+  padding-bottom: 8px;
+}
+.step-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+}
+.step {
+  padding: 32px 14px 35px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+.step:last-child {
+  border-right: 0;
+}
+.step img {
+  height: 205px;
+  width: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.step > span {
+  font-size: 11px;
+  color: var(--muted);
+  margin: 18px 0 6px;
+}
+.step h3 {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+.step p {
+  font-size: 12px;
+  max-width: 195px;
+}
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+.custom figure {
+  margin: 0;
+  background: #ffdb00;
+  overflow: hidden;
+  border-radius: 26px 0 0 26px;
+}
+.custom figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.custom-copy {
+  padding: 90px 5% 75px 10%;
+  align-self: center;
+}
+.text-link {
+  display: inline-flex;
+  gap: 9px;
+  border-bottom: 1px solid;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 13px;
+}
+.products {
+  padding-top: 42px;
+}
+.products-lead {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 0 4% 26px;
+  gap: 25px;
+}
+.products h2 {
+  font-size: clamp(56px, 5.8vw, 86px);
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.product {
+  border-right: 1px solid var(--line);
+  text-align: center;
+  padding: 36px 15px 38px;
+}
+.product:last-child {
+  border: 0;
+}
+.product img {
+  width: 88%;
+  height: 285px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  margin: 0 auto 25px;
+}
+.product h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.product p {
+  font-size: 12px;
+  color: var(--muted);
+}
+@media (max-width: 800px) {
+  .hero h1 {
+    white-space: normal;
+  }
+  .hero-packs {
+    gap: 5px;
+  }
+  .about-copy {
+    padding: 48px 5%;
+  }
+  .about h2,
+  .custom h2 {
+    font-size: 56px;
+  }
+  .step-grid,
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .step:nth-child(2) {
+    border-right: 0;
+  }
+  .step img {
+    height: 175px;
+  }
+  .product:nth-child(2) {
+    border-right: 0;
+  }
+  .section-lead {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .custom-copy {
+    padding: 45px 8%;
+  }
+}
+@media (max-width: 540px) {
+  .hero {
+    padding-top: 30px;
+  }
+  .hero h1 {
+    font-size: clamp(43px, 12vw, 65px);
+  }
+  .hero-desc {
+    font-size: 12px;
+  }
+  .desktop-only {
+    display: none;
+  }
+  .hero-packs {
+    margin-top: 30px;
+    gap: 0;
+  }
+  .featured-control {
+    gap: 8px;
+  }
+  .about-inner,
+  .custom-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-copy {
+    padding: 42px 12px;
+  }
+  .about-media {
+    min-height: 320px;
+    border-radius: 18px;
+  }
+  .section-lead,
+  .products-lead {
+    padding-inline: 12px;
+  }
+  .section-lead h2,
+  .products h2 {
+    font-size: 58px;
+  }
+  .step-grid,
+  .product-grid {
+    gap: 0;
+  }
+  .step {
+    padding: 18px 7px 25px;
+  }
+  .step img {
+    height: 128px;
+  }
+  .step h3 {
+    font-size: 14px;
+  }
+  .step p {
+    font-size: 11px;
+  }
+  .custom figure {
+    border-radius: 20px;
+    max-height: 400px;
+  }
+  .custom-copy {
+    padding: 45px 12px;
+  }
+  .products-lead {
+    align-items: start;
+    flex-direction: column;
+  }
+  .product {
+    padding: 20px 6px;
+  }
+  .product img {
+    height: 180px;
+  }
+}
+
+/* Decorative grid: ONE shared SVG seam at each section boundary. */
+body {
+  background-image:
+    linear-gradient(var(--frame-line), var(--frame-line)),
+    linear-gradient(var(--frame-line), var(--frame-line));
+  background-position:
+    left var(--page-gutter) top var(--header-guide-start),
+    right var(--page-gutter) top var(--header-guide-start);
+  background-size:
+    var(--frame-width) calc(100% - var(--header-guide-start)),
+    var(--frame-width) calc(100% - var(--header-guide-start));
+  background-repeat: no-repeat;
+}
+.container,
+.about .about-inner.container {
+  width: calc(100% - 2 * var(--page-gutter));
+  max-width: none;
+  margin-inline: var(--page-gutter);
+}
+.about .about-inner,
+.custom .custom-grid {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0;
+  align-items: stretch;
+}
+.about .about-copy {
+  padding: clamp(40px, 5vw, 90px) clamp(24px, 4vw, 70px);
+}
+.custom .custom-grid > figure {
+  width: 100%;
+  min-width: 0;
+}
+.custom .custom-grid > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero,
+.bordered-section {
+  position: relative;
+  border: 0;
+  background-image: none;
+}
+.hero::before,
+.hero::after,
+.bordered-section::before,
+.bordered-section::after {
+  content: none;
+}
+/* Only the first top boundary and last CTA/footer boundaries are standalone */
+.hero {
+  border-top: var(--frame-width) solid var(--frame-line);
+}
+.products .product-grid {
+  border-bottom: 0;
+}
+.mixora-seam {
+  position: relative;
+  z-index: 8;
+  height: 0;
+  pointer-events: none;
+}
+.mixora-seam::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--frame-width);
+  background: var(--frame-line);
+}
+.mixora-seam svg {
+  position: absolute;
+  top: calc(-1 * var(--frame-radius));
+  height: calc(2 * var(--frame-radius));
+  width: calc(2 * var(--frame-radius));
+  overflow: visible;
+}
+.mixora-seam svg:first-child {
+  left: calc(var(--page-gutter) - var(--frame-radius));
+}
+.mixora-seam svg:last-child {
+  right: calc(var(--page-gutter) - var(--frame-radius));
+  transform: scaleX(-1);
+}
+.mixora-seam svg .seam-background {
+  fill: var(--cream);
+}
+.mixora-seam svg .seam-line {
+  fill: var(--frame-line);
+}
+.mixora-seam svg .seam-stroke {
+  stroke: #fff;
+  stroke-width: var(--frame-width);
+  fill: none;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+/* The header and the final footer still have their own horizontal guides. */
+footer.container::before,
+.footer-main::after,
+.footer-bottom::after {
+  content: "";
+  position: absolute;
+  left: calc(-1 * var(--page-gutter));
+  width: calc(100% + 2 * var(--page-gutter));
+  height: var(--frame-width);
+  background: var(--frame-line);
+  pointer-events: none;
+}
+footer.container::before {
+  top: 0;
+}
+.footer-main::after,
+.footer-bottom::after {
+  bottom: 0;
+}
+@media (max-width: 768px) {
+  body {
+    --page-gutter: 16px;
+    --frame-radius: 26px;
+  }
+  .container,
+  .about .about-inner.container {
+    width: calc(100% - 2 * var(--page-gutter));
+    margin-inline: var(--page-gutter);
+  }
+  .about .about-inner,
+  .custom .custom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mixora-seam svg {
+    width: calc(var(--page-gutter) + var(--frame-radius));
+    overflow: hidden;
+  }
+  .mixora-seam svg:first-child {
+    left: 0;
+  }
+  .mixora-seam svg:last-child {
+    right: 0;
+  }
+}
+
+/* HERO TOP ONLY — independent quarter-circle arcs BELOW the header.
+   Does not use the inter-section seam: that seam contains two halves. */
+.hero {
+  position: relative;
+  border-top: var(--frame-width) solid var(--frame-line);
+}
+.mixora-hero-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--frame-radius);
+  z-index: 9;
+  pointer-events: none;
+}
+.mixora-hero-top .hero-corner {
+  position: absolute;
+  top: 0;
+  width: var(--frame-radius);
+  height: var(--frame-radius);
+  overflow: visible;
+  fill: none;
+  stroke: var(--frame-line);
+  stroke-width: var(--frame-width);
+}
+.mixora-hero-top .hero-corner-left {
+  left: var(--page-gutter);
+}
+.mixora-hero-top .hero-corner-right {
+  right: var(--page-gutter);
+  transform: scaleX(-1);
+}
+
+/* =============================================================
+   HERO — FIGMA 1440 PX REFERENCE
+   These rules change only the hero's interior, not frame/seams.
+   Line-height of H1 = 100% (assumed from Figma's "100").
+   ============================================================= */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 1120px;
+    padding-top: 80px;
+    padding-bottom: 45px;
+  }
+  .hero h1 {
+    font-family: "Boldonse", sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 100px;
+    white-space: nowrap;
+  }
+  .hero-desc {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 950px;
+    margin: 4px auto 32px;
+  }
+  .hero .actions {
+    gap: 12px;
+  }
+  .hero .actions .pill {
+    height: 56px;
+    min-height: 56px;
+    border-radius: 30px;
+  }
+  .hero .actions .pill:first-child {
+    width: 245px;
+  }
+  .hero .actions .pill:nth-child(2) {
+    width: 119px;
+  }
+
+  /* The original artwork has 3 independent assets, not one
+     1131x566 image. These values set their shared composition. */
+  .hero-packs {
+    width: 100%;
+    max-width: 1440px;
+    height: 607px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 20px;
+    padding: 0;
+  }
+
+  .hero-products-single {
+    display: block;
+    width: 1131px;
+    max-width: 100%;
+    height: 566px;
+
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .featured-control h2 {
+    font-family: "Boldonse", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0;
+  }
+  .featured-control p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 16px;
+  }
+  .featured-control .pill-mini {
+    width: 136px;
+    height: 48px;
+    min-height: 48px;
+  }
+  .featured-control .round-arrow {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1033px) {
+  .hero h1 {
+    font-size: 62px;
+  }
+}
+
+/* HERO — BUTTON TYPOGRAPHY */
+
+.hero .pill {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* ==========================================
+   ABOUT MIXORA — FIGMA 1440
+========================================== */
+
+@media (min-width: 1024px) {
+  /* SECTION */
+
+  .about {
+    height: 722px;
+    min-height: 722px;
+  }
+
+  .about .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+
+    height: 100%;
+    min-height: 0;
+    align-items: stretch;
+  }
+
+  /* LEFT COLUMN */
+
+  .about .about-copy {
+    min-width: 0;
+    padding: 106px 64px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* OVERLINE */
+
+  .about .section-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    margin: 0 0 8px;
+  }
+
+  /* MAIN HEADING */
+
+  .about h2 {
+    font-family: "Boldonse", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 0;
+
+    width: 100%;
+    max-width: 544px;
+    margin: 0 0 8px;
+  }
+
+  /* DESCRIPTION */
+
+  .about .about-copy > p:not(.section-eyebrow) {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+
+    width: 100%;
+    max-width: 544px;
+    margin: 0 0 16px;
+  }
+
+  /* BENEFITS */
+
+  .about .benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .about .benefits li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 24px;
+  }
+
+  /* RIGHT COLUMN — PHOTO */
+
+  .about .about-media {
+    width: 100%;
+    height: 722px;
+    min-height: 0;
+
+    margin: 0;
+    align-self: center;
+
+    overflow: hidden;
+    border-radius: 0 48px 48px 0;
+  }
+
+  .about .about-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* ==========================================
+   HOW IT WORKS — FIGMA 1440
+========================================== */
+
+@media (min-width: 1024px) {
+  /* SECTION */
+
+  .steps {
+    height: 633px;
+    min-height: 633px;
+    padding: 32px 0 0;
+  }
+
+  .steps > .container {
+    height: 100%;
+  }
+
+  /* TOP BLOCK */
+
+  .steps .section-lead {
+    display: grid;
+    grid-template-columns: 608px 1fr;
+    align-items: end;
+    gap: 0;
+
+    height: 98px;
+    padding: 0 0 0 64px;
+    margin: 0 0 23px;
+  }
+
+  .steps .section-lead > div {
+    min-width: 0;
+  }
+
+  /* SMALL OVERLINE */
+
+  .steps .section-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin: 0 0 8px;
+  }
+
+  /* MAIN HEADING */
+
+  .steps h2 {
+    font-family: "Boldonse", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 70px;
+    letter-spacing: 0;
+
+    width: 608px;
+    max-width: 100%;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  /* DESCRIPTION BESIDE HEADING */
+
+  .steps .section-lead > p {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+
+    width: 100%;
+    max-width: 698px;
+
+    margin: 0;
+    padding: 0;
+    align-self: end;
+  }
+
+  /* FOUR CARDS */
+
+  .steps .step-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    width: 100%;
+    height: 480px;
+
+    margin: 0;
+    border-top: 1px solid var(--frame-line);
+  }
+
+  .steps .step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    height: 480px;
+
+    padding: 40px 48px;
+    margin: 0;
+
+    text-align: center;
+    border-right: 1px solid var(--frame-line);
+
+    overflow: hidden;
+  }
+
+  .steps .step:last-child {
+    border-right: 0;
+  }
+
+  /* IMAGES — EXACT FIGMA POSITIONS */
+
+  .steps .step img {
+    position: absolute;
+    display: block;
+
+    max-width: none;
+    max-height: none;
+    margin: 0;
+
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+
+  /* STEP 01 */
+
+  .steps .step:nth-child(1) img {
+    width: 240px;
+    height: 296px;
+    left: 48.13px;
+    top: 37px;
+  }
+
+  /* STEP 02 */
+
+  .steps .step:nth-child(2) img {
+    width: 191px;
+    height: 286px;
+    left: 72.63px;
+    top: 42px;
+  }
+
+  /* STEP 03 */
+
+  .steps .step:nth-child(3) img {
+    width: 337px;
+    height: 300px;
+    left: -0.38px;
+    top: 40px;
+  }
+
+  /* STEP 04 */
+
+  .steps .step:nth-child(4) img {
+    width: 253px;
+    height: 263px;
+    left: 48px;
+    top: 67px;
+  }
+
+  /* STEP NUMBER */
+
+  .steps .step > span {
+    position: relative;
+    z-index: 1;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    margin: auto 0 0;
+    color: var(--ink);
+  }
+
+  /* STEP TITLE */
+
+  .steps .step h3 {
+    position: relative;
+    z-index: 1;
+
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+
+    width: 100%;
+    max-width: 240.25px;
+
+    margin: 0;
+    text-align: center;
+    letter-spacing: 0;
+  }
+
+  /* STEP DESCRIPTION */
+
+  .steps .step p {
+    position: relative;
+    z-index: 1;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    width: 100%;
+    max-width: 240.25px;
+
+    margin: 0;
+    text-align: center;
+  }
+}
+
+/* ==========================================
+   YOUR MIX — FIGMA 1440
+========================================== */
+
+@media (min-width: 1024px) {
+  /* SECTION AND COLUMNS */
+
+  .custom {
+    height: 720px;
+    min-height: 720px;
+  }
+
+  .custom .custom-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+    align-items: stretch;
+
+    height: 100%;
+    min-height: 0;
+  }
+
+  /* LEFT COLUMN — PHOTO */
+
+  .custom .custom-grid > figure {
+    position: relative;
+    z-index: 3;
+
+    width: 100%;
+    height: 720px;
+    min-width: 0;
+    margin: 0;
+
+    /* Заокруглення лише лівих кутів */
+    border-radius: 48px 0 0 48px;
+    overflow: hidden;
+  }
+
+  /* RIGHT COLUMN — TEXT */
+
+  .custom .custom-copy {
+    min-width: 0;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding: 0 63px 0 64px;
+  }
+
+  /* OVERLINE */
+
+  .custom .section-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    margin: 0 0 8px;
+  }
+
+  /* MAIN HEADING */
+
+  .custom h2 {
+    font-family: "Boldonse", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    width: 100%;
+    max-width: 545px;
+
+    margin: 0 0 16px;
+  }
+
+  .custom h2 em {
+    color: var(--pink);
+    font-style: normal;
+  }
+
+  /* DESCRIPTION */
+
+  .custom .custom-copy > p:not(.section-eyebrow) {
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+
+    width: 100%;
+    max-width: 545px;
+
+    margin: 0;
+  }
+}
+
+/* ==========================================
+   READY-MADE PRODUCTS — FIGMA 1440
+========================================== */
+
+@media (min-width: 1024px) {
+  /* SECTION */
+
+  .products {
+    height: 773px;
+    min-height: 773px;
+    padding: 32px 0 0;
+  }
+
+  .products > .container {
+    height: auto;
+  }
+
+  /* TOP BLOCK */
+
+  .products .products-lead {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    height: 188px;
+    padding: 0 64px;
+    margin: 0 0 33px;
+    gap: 0;
+  }
+
+  /* OVERLINE */
+
+  .products .section-eyebrow {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    margin: 0 0 8px;
+  }
+
+  /* MAIN HEADING */
+
+  .products h2 {
+    font-family: "Boldonse", sans-serif;
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    width: 712px;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* PINK ACCENT */
+
+  .products h2 em {
+    color: var(--pink);
+    font-style: normal;
+  }
+
+  /* SEE ALL PRODUCTS BUTTON */
+
+  .products .products-lead .pill {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 175px;
+    height: 48px;
+    min-height: 48px;
+    flex-shrink: 0;
+
+    padding: 0;
+    border-radius: 30px;
+
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+  /* FOUR PRODUCT CARDS */
+
+  .products .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    width: 100%;
+    height: 520px;
+    margin: 0;
+
+    border-top: 1px solid var(--frame-line);
+    border-bottom: 0;
+  }
+
+  .products .product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 0;
+    height: 520px;
+
+    padding: 40px 48px;
+    margin: 0;
+
+    text-align: center;
+    border-right: 1px solid var(--frame-line);
+  }
+
+  .products .product:last-child {
+    border-right: 0;
+  }
+
+  /* PRODUCT IMAGES */
+
+  .products .product img {
+    display: block;
+
+    width: 305px;
+    height: 305px;
+    max-width: none;
+
+    object-fit: contain;
+    flex-shrink: 0;
+
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+  }
+
+  /* PRODUCT TITLE */
+
+  .products .product h3 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+
+    width: 100%;
+    max-width: 240.25px;
+
+    margin: 57.5px 0 0;
+    text-align: center;
+    align-self: center;
+    letter-spacing: 0;
+  }
+
+  /* PRODUCT DESCRIPTION */
+
+  .products .product p {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    width: 100%;
+    max-width: 240.25px;
+
+    margin: 0;
+    text-align: center;
+    align-self: center;
+  }
+}
+
+.about {
+  position: relative;
+  z-index: 9;
+}
+
+.about .about-media {
+  position: relative;
+  z-index: 3;
+  border-radius: 0 48px 48px 0;
+  overflow: hidden;
+}
+
+/* YOUR MIX — photo above decorative seams */
+
+.custom {
+  position: relative;
+  z-index: 9;
+}
+
+/* ==========================================
+   READY-MADE PRODUCTS — FINAL ALIGNMENT
+========================================== */
+
+@media (min-width: 1024px) {
+  .products .product > a {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+  }
+
+  /* Упаковки розташовані по центру карток */
+  .products .product img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin: 0;
+  }
+
+  /* Назви товарів */
+  .products .product h3 {
+    margin: 57.5px auto 0;
+  }
+
+  /* Описи товарів */
+  .products .product p {
+    margin: 0 auto;
+  }
+}
+
+/* HERO — VISIBLE NAVIGATION ARROWS */
+
+.hero .round-arrow {
+  opacity: 1;
+}
+
+.hero .round-arrow img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  max-width: none;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .hero > .container {
+    overflow: clip;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 11vw, 44px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .hero h1 em {
+    display: block;
+  }
+
+  .hero .hero-desc {
+    max-width: 310px;
+    font-size: 13px;
+    line-height: 19px;
+    margin: 10px auto 16px;
+  }
+
+  .hero .hero-packs {
+    width: 132%;
+    max-width: none;
+    margin: 16px 0 12px -16%;
+  }
+
+  .hero .featured-control .round-arrow {
+    width: 38px;
+    height: 38px;
+  }
+
+  .hero .featured-control {
+    padding-inline: 20px;
+  }
+
+  .hero .round-arrow img {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero .actions {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .hero .actions .pill {
+    width: auto;
+    height: 44px;
+    min-height: 44px;
+    padding-inline: 18px;
+    white-space: nowrap;
+  }
+
+  .hero .hero-products-single {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .hero .actions .pill {
+    gap: 8px;
+    padding-inline: 15px;
+  }
+}
+
+/* MIXORA — CUSTOM ICONS */
+
+.round-arrow img {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* About Mixora */
+
+.about .benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about .benefits li img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ACCESSIBILITY — SKIP LINK */
+
+.skip-link {
+    position: fixed;
+    top: -100px;
+    left: 20px;
+    z-index: 1000;
+
+    padding: 12px 20px;
+    background: var(--ink);
+    color: white;
+
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
+
+@media (max-width: 540px) {
+    .products .product p {
+        font-size: 12px;
+        line-height: 18px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}
