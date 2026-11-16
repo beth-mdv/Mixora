@@ -45,3 +45,7 @@ For a Git-connected deployment, use the `main` branch with the project root as t
 ## Notes
 
 This repository contains an educational prototype. Some links point to pages planned for future development.
+
+Lab 09 — Vercel Deployment
+URL - https://mixora-sigma.vercel.app
+Застосунок є статичним HTML/CSS/JS-проєктом
