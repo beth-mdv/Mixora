@@ -20,7 +20,15 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/tailwind.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css?v=hero-top-4" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="./js/site.js" defer></script>
   </head>
 
@@ -385,12 +393,63 @@
           </div>
 
           <div class="hero-packs">
-            <img
-              class="hero-products-single"
-              src="assets/images/products-hero.webp"
-              alt="Mixora coffee products"
-              fetchpriority="high"
-            />
+            <div class="swiper hero-pack-swiper" aria-label="Featured coffee blends">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Morning Ritual coffee blend" data-product-name="Morning Ritual" data-product-description="Balance · Choco · Nutty" data-product-target="#product-morning-ritual">
+                  <span class="sr-only">Morning Ritual coffee blend</span>
+                  <div class="hero-pack-3d">
+                    <div class="hero-pack-views">
+                      <img class="hero-pack-fallback" src="assets/images/product-ritual.webp" alt="" aria-hidden="true" />
+                      <img class="hero-pack-frame" data-angle="left-45" src="assets/images/hero-rotation/morning-ritual/morning-ritual-left-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="left-25" src="assets/images/hero-rotation/morning-ritual/morning-ritual-left-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="front" src="assets/images/hero-rotation/morning-ritual/morning-ritual-front.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-25" src="assets/images/hero-rotation/morning-ritual/morning-ritual-right-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-45" src="assets/images/hero-rotation/morning-ritual/morning-ritual-right-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="Citrus Bloom coffee blend" data-product-name="Citrus Bloom" data-product-description="Bright · Floral · Citrus" data-product-target="#product-citrus-bloom">
+                  <span class="sr-only">Citrus Bloom coffee blend</span>
+                  <div class="hero-pack-3d">
+                    <div class="hero-pack-views">
+                      <img class="hero-pack-fallback" src="assets/images/product-citrus.webp" alt="" aria-hidden="true" />
+                      <img class="hero-pack-frame" data-angle="left-45" src="assets/images/hero-rotation/citrus-bloom/citrus-bloom-left-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="left-25" src="assets/images/hero-rotation/citrus-bloom/citrus-bloom-left-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="front" src="assets/images/hero-rotation/citrus-bloom/citrus-bloom-front.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-25" src="assets/images/hero-rotation/citrus-bloom/citrus-bloom-right-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-45" src="assets/images/hero-rotation/citrus-bloom/citrus-bloom-right-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="After Dark coffee blend" data-product-name="After Dark" data-product-description="Bold · Cocoa · Roasty" data-product-target="#product-after-dark">
+                  <span class="sr-only">After Dark coffee blend</span>
+                  <div class="hero-pack-3d">
+                    <div class="hero-pack-views">
+                      <img class="hero-pack-fallback" src="assets/images/product-dark.webp" alt="" aria-hidden="true" />
+                      <img class="hero-pack-frame" data-angle="left-45" src="assets/images/hero-rotation/after-dark/after-dark-left-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="left-25" src="assets/images/hero-rotation/after-dark/after-dark-left-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="front" src="assets/images/hero-rotation/after-dark/after-dark-front.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-25" src="assets/images/hero-rotation/after-dark/after-dark-right-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-45" src="assets/images/hero-rotation/after-dark/after-dark-right-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide swiper-slide-active" role="group" aria-roledescription="slide" aria-label="Daily Balance coffee blend" data-product-name="Daily Balance" data-product-description="Sweet · Caramel · Smooth" data-product-target="#product-daily-balance">
+                  <span class="sr-only">Daily Balance coffee blend</span>
+                  <div class="hero-pack-3d">
+                    <div class="hero-pack-views">
+                      <img class="hero-pack-fallback" src="assets/images/product-daily.webp" alt="" aria-hidden="true" />
+                      <img class="hero-pack-frame" data-angle="left-45" src="assets/images/hero-rotation/daily-balance/daily-balance-left-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="left-25" src="assets/images/hero-rotation/daily-balance/daily-balance-left-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="front" src="assets/images/hero-rotation/daily-balance/daily-balance-front.png" alt="" aria-hidden="true" loading="eager" decoding="async" fetchpriority="high" />
+                      <img class="hero-pack-frame" data-angle="right-25" src="assets/images/hero-rotation/daily-balance/daily-balance-right-25.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                      <img class="hero-pack-frame" data-angle="right-45" src="assets/images/hero-rotation/daily-balance/daily-balance-right-45.png" alt="" aria-hidden="true" loading="eager" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination hero-pack-pagination" aria-label="Choose featured blend"></div>
+            </div>
           </div>
 
           <div class="featured-control">
@@ -398,19 +457,20 @@
               type="button"
               class="round-arrow transition-transform duration-200 enabled:hover:scale-105 enabled:active:scale-95 enabled:focus-visible:outline-2 enabled:focus-visible:outline-offset-2 enabled:focus-visible:outline-[#FC4696] motion-reduce:transition-none"
               aria-label="Previous product"
-              disabled
+              data-hero-prev
             >
               <img src="assets/icons/arrow-left.svg" alt="" />
             </button>
 
             <div>
-              <h2>Daily balance</h2>
+              <h2 data-hero-product-name>Daily Balance</h2>
 
-              <p>Discover the taste and character of our signature coffee</p>
+              <p data-hero-product-description>Sweet · Caramel · Smooth</p>
 
               <a
                 class="pill pill-mini shadow-none transition-[transform,translate,box-shadow] duration-200 ease-out hover:-translate-y-[4px] hover:shadow-[0_6px_0_#C9C2BD] active:translate-y-[3px] active:shadow-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#FC4696] motion-reduce:transition-none motion-reduce:hover:translate-y-0 motion-reduce:active:translate-y-0"
-                href="#products"
+                href="#product-daily-balance"
+                data-hero-product-link
               >
                 See details
               </a>
@@ -420,7 +480,7 @@
               type="button"
               class="round-arrow transition-transform duration-200 enabled:hover:scale-105 enabled:active:scale-95 enabled:focus-visible:outline-2 enabled:focus-visible:outline-offset-2 enabled:focus-visible:outline-[#FC4696] motion-reduce:transition-none"
               aria-label="Next product"
-              disabled
+              data-hero-next
             >
               <img src="assets/icons/arrow-right.svg" alt="" />
             </button>
@@ -1266,6 +1326,166 @@
         </svg>
       </div>
 
+      <section class="scroll-reviews" aria-labelledby="scroll-reviews-title">
+        <div class="scroll-reviews__decor scroll-reviews__decor--top" aria-hidden="true"></div>
+        <div class="scroll-reviews__decor scroll-reviews__decor--left" aria-hidden="true">✦</div>
+        <div class="scroll-reviews__decor scroll-reviews__decor--right" aria-hidden="true">✦</div>
+
+        <div class="scroll-reviews__inner">
+          <header class="scroll-reviews__header">
+            <p class="scroll-reviews__eyebrow">What coffee lovers say</p>
+            <h1 class="scroll-reviews__title" id="scroll-reviews-title">Coffee stories</h1>
+            <p class="scroll-reviews__intro">
+              A scroll-driven collection of fictional demo testimonials for the Mixora prototype.
+            </p>
+          </header>
+
+          <div class="scroll-reviews__stage" aria-label="Customer review stories">
+            <article class="scroll-review-card scroll-review-card--caramel">
+              <span class="scroll-review-card__number" aria-hidden="true">01</span>
+              <span class="scroll-review-card__quote" aria-hidden="true">“</span>
+              <blockquote class="scroll-review-card__text">
+                The Velvet Hazelnut blend completely changed my mornings. Sweet, smooth, and the aroma fills the whole kitchen.
+              </blockquote>
+              <footer class="scroll-review-card__author">
+                <strong>Marta K.</strong>
+                <span>Home barista, Lviv</span>
+              </footer>
+            </article>
+
+            <article class="scroll-review-card scroll-review-card--coral">
+              <span class="scroll-review-card__number" aria-hidden="true">02</span>
+              <span class="scroll-review-card__quote" aria-hidden="true">“</span>
+              <blockquote class="scroll-review-card__text">
+                I built my own blend in the constructor and it arrived beautifully packed. It tastes like a specialty café, but at home.
+              </blockquote>
+              <footer class="scroll-review-card__author">
+                <strong>Ostap T.</strong>
+                <span>Mixora customer, Kyiv</span>
+              </footer>
+            </article>
+
+            <article class="scroll-review-card scroll-review-card--pink">
+              <span class="scroll-review-card__number" aria-hidden="true">03</span>
+              <span class="scroll-review-card__quote" aria-hidden="true">“</span>
+              <blockquote class="scroll-review-card__text">
+                The beans were roasted days before shipping — you can really taste the freshness. I only wish the bags came bigger.
+              </blockquote>
+              <footer class="scroll-review-card__author">
+                <strong>Iryna S.</strong>
+                <span>Office manager, Odesa</span>
+              </footer>
+            </article>
+
+            <article class="scroll-review-card scroll-review-card--sage">
+              <span class="scroll-review-card__number" aria-hidden="true">04</span>
+              <span class="scroll-review-card__quote" aria-hidden="true">“</span>
+              <blockquote class="scroll-review-card__text">
+                Mixora tastes as good as the packaging looks. The citrus notes are stunning, bright, and completely unexpected.
+              </blockquote>
+              <footer class="scroll-review-card__author">
+                <strong>Danylo B.</strong>
+                <span>Graphic designer, Kharkiv</span>
+              </footer>
+            </article>
+
+            <article class="scroll-review-card scroll-review-card--apricot">
+              <span class="scroll-review-card__number" aria-hidden="true">05</span>
+              <span class="scroll-review-card__quote" aria-hidden="true">“</span>
+              <blockquote class="scroll-review-card__text">
+                I gifted the discovery set to my dad. He now texts me coffee puns every morning. A ten out of ten gift.
+              </blockquote>
+              <footer class="scroll-review-card__author">
+                <strong>Sofiia Zh.</strong>
+                <span>Student, Vinnytsia</span>
+              </footer>
+            </article>
+
+            <article class="scroll-review-card scroll-review-card--berry">
+              <span class="scroll-review-card__number" aria-hidden="true">06</span>
+              <span class="scroll-review-card__quote" aria-hidden="true">“</span>
+              <blockquote class="scroll-review-card__text">
+                The subscription is dangerously convenient. Fresh roast, playful packaging, and the tasting notes card is a lovely touch.
+              </blockquote>
+              <footer class="scroll-review-card__author">
+                <strong>Andrii M.</strong>
+                <span>Software engineer, Dnipro</span>
+              </footer>
+            </article>
+          </div>
+
+          <p class="scroll-reviews__note">
+            Demo testimonials — fictional content for the Mixora Lab 10 prototype.
+          </p>
+        </div>
+      </section>
+
+      <div class="mixora-seam" aria-hidden="true">
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-stories-a"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-stories-a)"
+          />
+        </svg>
+
+        <svg
+          viewBox="0 0 96 96"
+          preserveAspectRatio="xMaxYMid slice"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <mask
+              id="seam-mask-stories-b"
+              maskUnits="userSpaceOnUse"
+              x="0"
+              y="0"
+              width="96"
+              height="96"
+            >
+              <path
+                class="seam-stroke"
+                d="M0 48 H96 M48 0 V96 M48 0 A48 48 0 0 0 96 48 A48 48 0 0 0 48 96"
+              />
+            </mask>
+          </defs>
+
+          <rect class="seam-background" width="96" height="96" />
+
+          <rect
+            class="seam-line"
+            width="96"
+            height="96"
+            mask="url(#seam-mask-stories-b)"
+          />
+        </svg>
+      </div>
+
       <section
         id="find-us"
         class="bordered-section py-12 md:py-16"
@@ -1493,5 +1713,8 @@
         }
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+    <script src="./js/coffee-stories.js" defer></script>
   </body>
 </html>

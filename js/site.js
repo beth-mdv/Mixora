@@ -1,4 +1,301 @@
 (() => {
+  const heroRoot = document.querySelector(".hero-pack-swiper");
+  const heroName = document.querySelector("[data-hero-product-name]");
+  const heroDescription = document.querySelector("[data-hero-product-description]");
+  const heroLink = document.querySelector("[data-hero-product-link]");
+  const heroPrev = document.querySelector("[data-hero-prev]");
+  const heroNext = document.querySelector("[data-hero-next]");
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let heroSwiper = null;
+  let heroAnimationFrame = 0;
+  let heroLoopFixFrame = 0;
+  let heroTransitionActive = false;
+  let heroTransitionDuration = 0;
+
+  function syncHeroProduct(slide) {
+    if (!slide || !heroName || !heroDescription || !heroLink) {
+      return;
+    }
+    heroName.textContent = slide.dataset.productName ?? "";
+    heroDescription.textContent = slide.dataset.productDescription ?? "";
+    heroLink.href = slide.dataset.productTarget ?? "#products";
+  }
+
+  function getAngleWeights(progress) {
+    const boundedProgress = Math.max(-2, Math.min(2, Number(progress) || 0));
+    const position = Math.max(0, Math.min(4, 2 - boundedProgress));
+    const lower = Math.floor(position);
+    const upper = Math.min(4, lower + 1);
+    const fraction = position - lower;
+    const blend = fraction * fraction * (3 - 2 * fraction);
+    const weights = [0, 0, 0, 0, 0];
+    weights[lower] += 1 - blend;
+    weights[upper] += blend;
+    return weights;
+  }
+
+  function getHeroVisualStep(swiper, wrapper) {
+    const carouselStep = Math.max(1, swiper.size);
+    const packWidth = wrapper.offsetWidth || carouselStep;
+    const sideScale = 1 - 0.24;
+    const maximumSideOffset = Math.max(
+      0,
+      (carouselStep - packWidth * sideScale) / 2,
+    );
+    const preferredSideOffset = Math.max(
+      carouselStep * 0.33,
+      packWidth * 0.5,
+    );
+    return Math.min(preferredSideOffset, maximumSideOffset);
+  }
+
+  function updateHeroPackSlide(slide, progress = 0, swiper = null) {
+    const weights = getAngleWeights(progress);
+    const frames = [...slide.querySelectorAll(".hero-pack-frame")];
+    const fallback = slide.querySelector(".hero-pack-fallback");
+    let fallbackOpacity = 0;
+
+    frames.forEach((frame, index) => {
+      const weight = weights[index] ?? 0;
+      if (frame.dataset.loaded === "true") {
+        frame.style.opacity = String(weight);
+      } else {
+        frame.style.opacity = "0";
+        fallbackOpacity += weight;
+      }
+    });
+
+    if (fallback) {
+      fallback.style.opacity = String(fallbackOpacity);
+    }
+
+    const boundedProgress = Math.max(-2, Math.min(2, Number(progress) || 0));
+    const distance = Math.abs(boundedProgress);
+    const farFadeProgress = Math.max(0, Math.min(1, distance - 1));
+    const farFade = farFadeProgress * farFadeProgress * (3 - 2 * farFadeProgress);
+    const wrapper = slide.querySelector(".hero-pack-3d");
+    if (wrapper) {
+      const carouselStep = swiper
+        ? Math.max(
+            1,
+            (swiper.slidesSizesGrid[0] || swiper.size) +
+              (Number.parseFloat(swiper.params.spaceBetween) || 0),
+          )
+        : 0;
+      const visualStep = swiper ? getHeroVisualStep(swiper, wrapper) : 0;
+      const horizontalOffset = swiper
+        ? boundedProgress * (carouselStep - visualStep) +
+          boundedProgress * 6
+        : boundedProgress * 6;
+      wrapper.style.opacity = String(
+        1 - Math.min(distance, 1) * 0.3 - farFade * 0.7,
+      );
+      wrapper.style.transform =
+        `translate3d(${horizontalOffset}px, ${distance * 28}px, 0) ` +
+        `scale(${1 - distance * 0.24})`;
+    }
+    slide.style.zIndex = String(Math.round((1 - distance) * 10));
+  }
+
+  function getHeroSlideProgress(swiper, slide, index, useVisualPosition = false) {
+    const slideSize = swiper.slidesSizesGrid[index] || slide.offsetWidth;
+    const spaceBetween = Number.parseFloat(swiper.params.spaceBetween) || 0;
+    const slideStep = Math.max(1, slideSize + spaceBetween);
+
+    if (useVisualPosition) {
+      const containerRect = swiper.el.getBoundingClientRect();
+      const slideRect = slide.getBoundingClientRect();
+      const containerCenter = containerRect.left + containerRect.width / 2;
+      const slideCenter = slideRect.left + slideRect.width / 2;
+      return (containerCenter - slideCenter) / slideStep;
+    }
+
+    return Number(slide.progress) || 0;
+  }
+
+  function updateHeroSlides(swiper, useVisualPosition = false) {
+    swiper.slides.forEach((slide, index) => {
+      updateHeroPackSlide(
+        slide,
+        getHeroSlideProgress(swiper, slide, index, useVisualPosition),
+        swiper,
+      );
+    });
+  }
+
+  // Swiper's CSS transition does not report slide progress on every frame.
+  function animateHeroSlides(swiper) {
+    heroTransitionActive = true;
+    if (heroAnimationFrame) {
+      return;
+    }
+
+    const updateFrame = () => {
+      heroAnimationFrame = 0;
+      if (!heroTransitionActive || swiper.destroyed) {
+        return;
+      }
+
+      updateHeroSlides(swiper, true);
+      heroAnimationFrame = window.requestAnimationFrame(updateFrame);
+    };
+
+    heroAnimationFrame = window.requestAnimationFrame(updateFrame);
+  }
+
+  function finishHeroSlideTransition(swiper) {
+    heroTransitionActive = false;
+    if (heroAnimationFrame) {
+      window.cancelAnimationFrame(heroAnimationFrame);
+      heroAnimationFrame = 0;
+    }
+    updateHeroSlides(swiper);
+  }
+
+  function scheduleHeroLoopFix(swiper) {
+    if (heroLoopFixFrame) {
+      window.cancelAnimationFrame(heroLoopFixFrame);
+    }
+
+    heroLoopFixFrame = window.requestAnimationFrame(() => {
+      heroLoopFixFrame = 0;
+      if (swiper.destroyed || swiper.animating) {
+        return;
+      }
+
+      const previousSlide = swiper.slides.find((slide) =>
+        slide.classList.contains("swiper-slide-prev"),
+      );
+      const nextSlide = swiper.slides.find((slide) =>
+        slide.classList.contains("swiper-slide-next"),
+      );
+      const hasVisiblePack = (slide) =>
+        slide &&
+        Number(slide.querySelector(".hero-pack-3d")?.style.opacity || 0) > 0;
+
+      if (!hasVisiblePack(previousSlide) || !hasVisiblePack(nextSlide)) {
+        swiper.loopFix();
+      }
+    });
+  }
+
+  if (heroRoot) {
+    heroRoot.querySelectorAll(".hero-pack-frame").forEach((frame) => {
+      const updateFrameState = (isLoaded) => {
+        frame.dataset.loaded = String(isLoaded);
+        const slide = frame.closest(".swiper-slide");
+        if (slide) {
+          if (heroSwiper) {
+            const index = Array.prototype.indexOf.call(heroSwiper.slides, slide);
+            updateHeroPackSlide(
+              slide,
+              getHeroSlideProgress(
+                heroSwiper,
+                slide,
+                index,
+                heroTransitionActive,
+              ),
+              heroSwiper,
+            );
+          } else {
+            updateHeroPackSlide(slide);
+          }
+        }
+      };
+
+      frame.addEventListener("load", () => updateFrameState(true));
+      frame.addEventListener("error", () => updateFrameState(false));
+      if (frame.complete) {
+        updateFrameState(frame.naturalWidth > 0);
+      }
+    });
+
+    heroRoot.querySelectorAll(".swiper-slide").forEach((slide) => {
+      updateHeroPackSlide(slide);
+    });
+  }
+
+  if (heroRoot && window.Swiper) {
+    heroSwiper = new window.Swiper(heroRoot, {
+      loop: true,
+      loopAddBlankSlides: false,
+      loopAdditionalSlides: 1,
+      centeredSlides: true,
+      watchSlidesProgress: true,
+      initialSlide: 3,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      speed: reducedMotion ? 0 : 1100,
+      autoplay: reducedMotion
+        ? false
+        : {
+            delay: 3500,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+      touchEventsTarget: "container",
+      pagination: {
+        el: heroRoot.querySelector(".hero-pack-pagination"),
+        clickable: true,
+      },
+      navigation: {
+        prevEl: heroPrev,
+        nextEl: heroNext,
+      },
+      on: {
+        setTransition(swiper, duration) {
+          heroTransitionDuration = duration;
+        },
+        setTranslate(swiper) {
+          if (heroTransitionActive || heroTransitionDuration > 0) {
+            animateHeroSlides(swiper);
+          } else {
+            updateHeroSlides(swiper);
+          }
+        },
+        transitionStart(swiper) {
+          animateHeroSlides(swiper);
+        },
+        transitionEnd(swiper) {
+          heroTransitionDuration = 0;
+          finishHeroSlideTransition(swiper);
+          scheduleHeroLoopFix(swiper);
+        },
+        loopFix(swiper) {
+          updateHeroSlides(swiper, heroTransitionActive);
+        },
+        realIndexChange(swiper) {
+          const activeSlide =
+            swiper.slides.find(
+              (slide) =>
+                Number(slide.dataset.swiperSlideIndex) === swiper.realIndex,
+            ) || swiper.slides[swiper.activeIndex];
+          syncHeroProduct(activeSlide);
+          scheduleHeroLoopFix(swiper);
+        },
+      },
+    });
+
+    heroSwiper.slides.forEach((slide) => {
+      slide.setAttribute(
+        "aria-label",
+        `${slide.dataset.productName} coffee blend`,
+      );
+    });
+    updateHeroSlides(heroSwiper);
+    const activeSlide = [...heroSwiper.slides].find((slide) =>
+      slide.classList.contains("swiper-slide-active"),
+    );
+    syncHeroProduct(activeSlide);
+  } else if (heroRoot) {
+    syncHeroProduct(heroRoot.querySelector(".swiper-slide-active"));
+  }
+
   const menuButton = document.querySelector(
     'button[aria-controls="mobile-navigation-drawer"]',
   );
